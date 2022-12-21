@@ -34,7 +34,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
     document.documentElement.dir = dir;
   }, [dir]);
   const Layout = (Component as any).Layout || Noop;
-
+  console.log("router.route",router.route)
   return (
     <QueryClientProvider client={queryClientRef.current}>
       <Hydrate state={pageProps.dehydratedState}>
